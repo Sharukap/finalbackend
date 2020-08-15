@@ -50,7 +50,7 @@ router.post('/login', (req, res, next) => {
 		}
 	      
 		else {
-			res.json({approved:true,type:"student"});
+			res.json({approved:true,Account_Type:students.accounttype,record_Id:students.id});
 		}
       }
     })
@@ -63,6 +63,23 @@ router.post('/login', (req, res, next) => {
     res.setHeader('Content-Type', 'text/plain');
     res.end('You are already authenticated!');
   }
+});
+
+router.get('/:userName',(req,res,next) => {
+    var username1 = req.params.userName;
+    User.findOne({username: username1})
+    .then((students) => {
+      if (students === null) {
+        var err = new Error('User ' + username + ' does not exist!');
+        err.status = 403;
+        return next(err);
+      }
+	    
+      else {
+        res.json({Name:students.name,Password:students.password,Email:students.email,Telnum:students.telnum,Address:students.address,Account_Type:students.accounttype,record_Id:students.id});
+      }
+    })
+    .catch((err) => next(err));
 })
 
 router.get('/logout', (req, res) => {
@@ -70,6 +87,7 @@ router.get('/logout', (req, res) => {
     req.session.destroy();
     res.clearCookie('session-id');
     res.redirect('/');
+	res.end("logged out from"+req.params.studentId); 
   }
 	
   else {

@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-
-
 const studentSchema = new Schema({
     	name: {
         type: String,
@@ -17,23 +15,22 @@ const studentSchema = new Schema({
         type: String,
         required: true,
 		unique:true,
-		minlength:12,
-		maxlength:15
+		//minlength:12,
+		//maxlength:15
     	},
 	//password should be 12-15 characters
 	email: {
         type: String,
         required: true
 	},
-	phoneno: {
+	telnum: {
         type: Number,
 	},
 	address:{
-		type:String,
+		type:String
 	},
 	accounttype:{
-		type:Boolean,
-		default:0
+		type:String
 	}
 	//account type:"true"(1) is for admin and "false"(0) is for student. unless adding an admin record it is not necessary to enter account type as default value will be set to false which is for student.
 },{
