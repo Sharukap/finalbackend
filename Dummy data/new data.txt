@@ -1,0 +1,43 @@
+[
+    {
+        "_id": "5f2c24f3cc78a5295035e369",
+        "accounttype": "student",
+        "name": "Caleb Croidon Rodrigo",
+        "username": "CR76H43",
+        "password": "pro478Higsont",
+        "email": "calebrodrigo34@yahoo.com",
+        "telnum": 777830432,
+        "address": "12/3, College Avenue Mount Lavinia",
+    },
+    {
+        "_id": "5f2e2dbe6b8edf23e09bc84b",
+        "accounttype": "admin",
+        "name": "Huan Carlos",
+        "username": "HC4g6",
+        "password": "Crocomboosh3",
+        "email": "huancarl@yahoo.com",
+        "telnum": 774567378,
+        "address": "31/3,Hill Street Kandy"
+    },
+    {
+        "_id": "5f2e8827ab82303024c083c7",
+        "accounttype": "student",
+        "name": "John Hunyadi",
+        "username": "Jhydi23",
+        "password": "Lopolinees98",
+        "email": "johnhun@yahoo.com",
+        "telnum": 717612378,
+        "address": "31/3,Hill Street Kandy"
+    },
+    {
+        "_id": "5f37a6a3e3ec4a549c41abdd",
+        "accounttype": "admin",
+        "name": "Bob Carl",
+        "username": "BCarl657",
+        "password": "Klept87",
+        "email": "riverrabrent@yahoo.com",
+		"telnum": 775209478,
+        "address": "8/3, 2nd lane Wellawatta"
+        
+    }
+]
